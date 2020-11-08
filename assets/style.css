@@ -225,6 +225,9 @@ input,textarea{
     width:90%;
 }
 input[type=submit]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background-color:rgb(255, 0, 106);
     max-width:100%;
     width:200px;
