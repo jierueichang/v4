@@ -213,6 +213,16 @@ pre{
 hr{
     border:2px solid white;
 }
+.linkbutton{
+    border:2px solid white;
+    border-radius:3px;
+    padding:7px;
+    margin:5px;
+    transition:background-color 0.2s;
+}
+.linkbutton:hover{
+    background-color:rgb(224, 31, 121);
+}
 
 /* CONTACT FORM */
 input,textarea{
