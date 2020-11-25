@@ -1,6 +1,11 @@
-let links = `
+/*let links = `
 <a href=projects.html>Projects</a>
 <a href=resume.html>Resume</a>
+<a href=journal.html>Journal</a>
+<a href=contact.html>Contact</a>`;*/
+
+let links = `
+<a href=projects.html>Projects</a>
 <a href=journal.html>Journal</a>
 <a href=contact.html>Contact</a>`;
 
