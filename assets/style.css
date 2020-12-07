@@ -219,6 +219,12 @@ hr{
     padding:7px;
     margin:5px;
     transition:background-color 0.2s;
+    white-space: nowrap;
+    display:block;
+    float:left;
+}
+br{
+    clear:left;
 }
 .linkbutton:hover{
     background-color:rgb(224, 31, 121);
