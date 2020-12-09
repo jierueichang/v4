@@ -275,12 +275,8 @@ input,textarea{
     background-color:rgb(14, 37, 71);
     color:white;
 }
-#name,#email{
+#name,#email,#message{
     margin:5px;
-}
-#message{
-    margin:5px;
-    width:98%;
 }
 textarea{
     height:300px;
