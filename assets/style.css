@@ -68,16 +68,19 @@ a:hover::before {
     height:100%;
     text-align:left;
     z-index:100;
+    padding-top:10px;
+    box-sizing: border-box;
 }
 #mobileNav a{
     position:relative;
     font-family:Bahnschrift, Lucida, sans-serif;
     display:block;
-    font-size:30pt;
+    font-size:40pt;
     color:black;
     text-decoration:none;
     padding:20px;
-    margin-bottom:0px;
+    padding-bottom:0px;
+    padding-top:0px;
     letter-spacing:-0.5px;
 }
 #mobileNav a::before{
@@ -127,7 +130,8 @@ h2{
 
 /* STARTPAGE ICONS */
 .icon{
-    transition:0.2s filter;
+    transition:0.2s all;
+    filter:brightness(0.9);
 }
 .icon::before{
     display:none;
@@ -137,7 +141,8 @@ h2{
     height:auto;
 }
 .icon:hover{
-    filter:brightness(0.5);
+    filter:brightness(1.1);
+    transform:scale(1.2);
 }
 #imgBox{
     display:grid;
@@ -169,18 +174,44 @@ li{
     background-image:url('placeholder.png');
     background-size:cover;
     background-blend-mode:darken;
-    transition:background-color 0.2s, color 0.2s;
+    transition:all 0.2s;
     padding:20px;
     padding-top:70px;
     padding-bottom:70px;
     text-align:center;
     background-color:rgba(0, 0, 0, 0);
     margin:10px;
-    border:2px solid white;
+    border-radius:5px;
+    box-shadow:0px 0px 50px rgb(20, 53, 104);
+    position:relative;
 }
+/*.card::before{
+    content:"";
+    border-radius:5px;
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgb(20, 53, 104);
+    top:0px;
+    left:0px;
+    z-index:-5;
+}
+.card:hover::before{
+    top:10px;
+}*/
 .card:hover{
     background-color:rgba(0, 0, 0, 0.534);
 }
+.card:hover:nth-child(odd){
+    transform:rotate(2deg);
+}
+.card:hover:nth-child(even){
+    transform:rotate(-2deg);
+}
+/*
+.card:hover::before > .card{
+    border-radius:0px 0px 100px red;
+}*/
 .card a{
     color:transparent;
     display:inline-block;
@@ -211,7 +242,7 @@ pre{
     padding-right:20%;
 }
 hr{
-    border:2px solid white;
+    border:2px solid rgb(29, 81, 160);
 }
 .linkbutton{
     border:2px solid white;
@@ -231,14 +262,28 @@ br{
 }
 
 /* CONTACT FORM */
+form *{
+    box-sizing: border-box;
+}
 input,textarea{
     padding:10px;
-    font-size:20pt;
+    font-size:14pt;
     font-family:"Segoe UI",Roboto,sans-serif;
-    margin:5px;
     border-radius:10px;
     border:none;
-    width:90%;
+    width:100%;
+    background-color:rgb(14, 37, 71);
+    color:white;
+}
+#name,#email{
+    margin:5px;
+}
+#message{
+    margin:5px;
+    width:98%;
+}
+textarea{
+    height:300px;
 }
 input[type=submit]{
     -webkit-appearance: none;
@@ -246,8 +291,8 @@ input[type=submit]{
     appearance: none;
     background-color:rgb(255, 0, 106);
     max-width:100%;
-    width:200px;
-    transition:background-color 0.5s;
+    width:400px;
+    transition:background-color 0.1s;
 }
 input[type=submit]:hover{
     background-color:rgb(236, 216, 37);
@@ -277,10 +322,11 @@ input[type=submit]:hover{
     }
     .icon:hover{
         filter:brightness(1);
+        transform:none;
     }
     .card{
         color:rgba(255, 255, 255, 1);
-        background-color:rgba(0, 0, 0, 0.534);
+        /*background-color:rgba(0, 0, 0, 0.534);*/
         padding-left:10px;
         padding-right:10px;
         padding-top:60px;
@@ -289,7 +335,7 @@ input[type=submit]:hover{
     .card a{
         display:inline-block;
         box-shadow:0px 0px 100px rgba(0, 0, 0, 0.712);
-        background-color:rgba(241, 11, 184, 0.459);
+        background-color:rgba(0, 0, 0, 0.753);
         padding:10px;
         color:white;
     }

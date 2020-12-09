@@ -17,13 +17,20 @@
             <h1>CONTACT</h1>
             <div class=container>
                 <form action="https://formspree.io/f/myybwrzw" method="POST">
-                    <p>NAME</p>
-                    <input type="text" name="Name" placeholder="Name"><br>
-                    <p>EMAIL</p>
-                    <input type="email" name="Email" placeholder="Email"><br>
-                    <p>MESSAGE</p>
-                    <textarea name='Message'></textarea><br>
-                    <input type="submit" value="Send">
+                    <div id=name>
+                        <p>NAME</p>
+                        <input type="text" name="Name" required>                      
+                    </div>
+                    <div id="email">
+                        <p>EMAIL</p>
+                        <input type="email" name="Email" required>                      
+                    </div>
+                    <div id="message">
+                        <p>MESSAGE</p>
+                        <textarea name='Message' required></textarea><br><br>
+                        <div style="text-align:center"><input type="submit" value="Send"></div>
+                    </div>
+                    <br><br>
                 </form>
             </div>
         </div>
