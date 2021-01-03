@@ -242,7 +242,8 @@ pre{
     padding-right:20%;
 }
 hr{
-    border:2px solid rgb(29, 81, 160);
+    border:none;
+    border-bottom:4px solid rgb(29, 81, 160);
 }
 .linkbutton{
     border:2px solid white;
