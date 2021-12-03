@@ -31,6 +31,7 @@ nav{
     text-align:left;
     box-shadow:0px 3px 100px rgb(56, 56, 184);
     z-index:99;
+    width:100%;
 }
 a{
     position:relative;
@@ -40,6 +41,7 @@ a{
     padding-left:5px;
     padding-right:5px;
     cursor:pointer;
+    display:inline-block;
 }
 a::before {
     content: "";
@@ -184,21 +186,9 @@ li{
     border-radius:5px;
     box-shadow:0px 0px 50px rgb(20, 53, 104);
     position:relative;
+    border: 2px solid white;
+    display:block;
 }
-/*.card::before{
-    content:"";
-    border-radius:5px;
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-color:rgb(20, 53, 104);
-    top:0px;
-    left:0px;
-    z-index:-5;
-}
-.card:hover::before{
-    top:10px;
-}*/
 .card:hover{
     background-color:rgba(0, 0, 0, 0.534);
 }
@@ -208,10 +198,6 @@ li{
 .card:hover:nth-child(even){
     transform:rotate(-2deg);
 }
-/*
-.card:hover::before > .card{
-    border-radius:0px 0px 100px red;
-}*/
 .card a{
     color:transparent;
     display:inline-block;
@@ -225,7 +211,53 @@ li{
 
 .grid{
     display:grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+}
+
+
+.card2{
+    color:rgba(255, 255, 255, 0);
+    background-color:rgb(11, 11, 43);
+    transition:all 0.2s;
+    margin:10px;
+    border-radius:10px;
+    box-shadow:0px 0px 50px rgb(20, 53, 104);
+    border: 2px solid white;
+    display:block;
+    z-index:0;
+    min-height:300px;
+    cursor:pointer;
+}
+.card2 .card-img{
+    width:calc(100% + 4px);
+    height:60%;
+    border-radius: 8px 8px 0px 0px;
+    background-size:cover;
+    background-position:center;
+    border: 2px solid white;
+    box-sizing: border-box;
+    left:-2px;
+    top:-2px;
+    position:relative;
+    z-index:-1;
+    transform: all 0.2s;
+}
+.card-body {
+    padding:10px;
+}
+.card-body p{
+    color:rgb(34, 179, 204);
+    margin-top:5px;
+    margin-bottom:5px;
+}
+.card-body a{
+    display:block;
+    background-color:transparent;
+    padding:0px;
+    font-size:20px;
+}
+.card2:hover {
+    transform:scale(1.05);
 }
 
 /* JOURNAL */
